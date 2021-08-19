@@ -1,4 +1,5 @@
 from random import randint
+import numpy
 #Task 1
 # random_number = randint(1,5)
 # answer = 0
@@ -41,19 +42,33 @@ from random import randint
 # else:
 #     print("triangle is not exist")
 #Task 4
-rand_numb = randint(50,100)
-answer_numb = 0
-answer_numb = rand_numb
-while answer_numb != 1:
-    print('-> ',answer_numb, end=' ')
-    print(answer_numb)
-    if answer_numb == 1:
-        print("hypothesis is working!")
+# rand_numb = randint(50,100)
+# answer_numb = 0
+# answer_numb = rand_numb
+# while answer_numb != 1:
+#     print('-> ',answer_numb, end=' ')
+#     print(answer_numb)
+#     if answer_numb == 1:
+#         print("hypothesis is working!")
     
-    if answer_numb % 2 == 0:
-        answer_numb = answer_numb // 2
-        print(answer_numb)
-    else:
-        answer_numb = (answer_numb * 3 + 1) // 2
-        print(answer_numb, end=' ')
-print()
+#     if answer_numb % 2 == 0:
+#         answer_numb = answer_numb // 2
+#         print(answer_numb)
+#     else:
+#         answer_numb = (answer_numb * 3 + 1) // 2
+#         print(answer_numb, end=' ')
+# print()
+#Task 5
+#list.pop()
+# _list = [1,2,25,32,29,3,4,5]
+# for elem in _list:
+#     if elem > 24 and elem < 38:
+#         _list.remove(elem)
+#     print("\n",_list, end=' ')
+#Task 6
+list = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+for i in reversed(list):
+    print(i, end=' ')
+    
+    
+
