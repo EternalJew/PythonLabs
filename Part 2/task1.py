@@ -25,5 +25,24 @@ print("TASK 3: Напишіть функцію, яка рахує факторі
 #     k*=i
 # print(k)
 
-print("TASK 4: динамічний масив підраховує кількість від'ємних")
+print("TASK 4: динамічний масив сортує рядки в порядку зростання")
+
+x=3#rows
+y=3#columns
+a=[]#create an empty list first
+for i in range(x):
+    a.append([0]*y)#And again append empty lists to original list
+    for j in range(y):
+         a[i][j]=int(input("Enter the value: "))
+
+for i in range(x):
+    sum_of_rows = sum(a[i])
+    print(sum_of_rows)
+        
+
+         
+for i in range(x):
+    for j in range(y):
+        print(a[i][j], end = ' ')
+    print("\n")
 
