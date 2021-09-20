@@ -24,7 +24,7 @@ BLUE2 = (0, 100, 255)
 BLACK = (0,0,0)
 
 BLOCK_SIZE = 20
-SPEED = 10
+SPEED = 100
 
 class SnakeGameAI:
     
@@ -94,14 +94,14 @@ class SnakeGameAI:
         # 6. return game over and score
         return reward, game_over, self.score
     
-    def is_collision(self , point = None):
-        if point is None:
-            point = self.head
+    def is_collision(self , pt = None):
+        if pt is None:
+            pt = self.head
         # hits boundary
-        if point.x > self.w - BLOCK_SIZE or point.x < 0 or point.y > self.h - BLOCK_SIZE or point.y < 0:
+        if pt.x > self.w - BLOCK_SIZE or pt.x < 0 or pt.y > self.h - BLOCK_SIZE or pt.y < 0:
             return True
         # hits itself
-        if point in self.snake[1:]:
+        if pt in self.snake[1:]:
             return True
         
         return False
@@ -121,7 +121,7 @@ class SnakeGameAI:
         
     def _move(self, action):
         
-        clock_wise = [Direction.RIGHT, Direction.LEFT, Direction.UP, Direction.DOWN]
+        clock_wise = [Direction.RIGHT, Direction.DOWN, Direction.LEFT, Direction.UP]
         idx = clock_wise.index(self.direction)
         
         if np.array_equal(action, [1, 0, 0]):
