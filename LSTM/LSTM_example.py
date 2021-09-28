@@ -12,7 +12,7 @@ from tensorflow.keras.preprocessing.text import Tokenizer, text_to_word_sequence
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 
 
-if __name__ == "__main__":
+if __name__ == "__main__": 
     print(glob.glob("*.*"))
     with open("./LSTM/train_data_true.txt") as f:
         texts_true = f.readlines()
