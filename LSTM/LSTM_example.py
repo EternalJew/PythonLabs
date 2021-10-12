@@ -14,11 +14,11 @@ from tensorflow.keras.preprocessing.sequence import pad_sequences
 
 if __name__ == "__main__": 
     print(glob.glob("*.*"))
-    with open("./LSTM/train_data_true.txt") as f:
+    with open("train_data_true.txt") as f:
         texts_true = f.readlines()
         texts_true[0] = texts_true[0].replace('\ufeff', '') #убираем первый невидимый символ
 
-    with open("./LSTM/train_data_false.txt", 'r', encoding='utf-8') as f:
+    with open("train_data_false.txt", 'r', encoding='utf-8') as f:
         texts_false = f.readlines()
         texts_false[0] = texts_false[0].replace('\ufeff', '') #убираем первый невидимый символ
 
@@ -79,5 +79,3 @@ print( sequence_to_text(data[0]) )
 
 res = model.predict(data_pad)
 print(res, np.argmax(res), sep='\n')
-    
-     
