@@ -7,7 +7,7 @@ public class GetMe : MonoBehaviour
 {
     public void GetData()
     {
-        StartCoroutine(GetRequest("http://127.0.0.1:5000/list"));
+        StartCoroutine(GetRequest("http://127.0.0.1:5000/quest/1"));
     }
 
     IEnumerator GetRequest(string uri)
